@@ -1,0 +1,40 @@
+<mat-toolbar class="custom-toolbar" [ngClass]="{ 'dark-mode': isDarkMode }">
+  <!-- Logo -->
+  <div class="logo">
+    <a routerLink="/">{{ appName }}</a>
+  </div>
+
+  <!-- Spacer -->
+  <span class="spacer"></span>
+
+  <!-- Navigation Links -->
+  <div class="nav-container">
+    <nav>
+      <ul>
+        <li>
+          <a mat-button routerLink="/">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a mat-button routerLink="/products">
+            <mat-icon>category</mat-icon>
+            <span>Products</span>
+          </a>
+        </li>
+        <li>
+          <a mat-button routerLink="/contact">
+            <mat-icon>contact_mail</mat-icon>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button mat-icon-button (click)="toggleDarkMode()">
+    <mat-icon>{{ isDarkMode ? "dark_mode" : "light_mode" }}</mat-icon>
+  </button>
+</mat-toolbar>
