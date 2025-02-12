@@ -115,3 +115,28 @@ button[mat-icon-button] {
     margin-right: 0;
   }
 }
+.notification-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px 16px !important;
+}
+
+.notification-button .mat-badge-content {
+  right: 0 !important;
+  top: 0 !important;
+  transform: translate(50%, -50%);
+}
+
+/* Remove fixed height/width constraints */
+.notification-button .mat-icon {
+  font-size: 24px; /* Adjust this value to match other icons */
+}
+
+/* Make sure the badge size is appropriate */
+.mat-badge-content {
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+}

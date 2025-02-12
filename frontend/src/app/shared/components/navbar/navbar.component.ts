@@ -4,7 +4,8 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { DarkModeService } from '../../../shared/services/dark-mode.service';
+import { MatBadgeModule } from '@angular/material/badge';
+import { DarkModeService } from '../../../shared/services/dark-mode/dark-mode.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,11 +18,13 @@ import { DarkModeService } from '../../../shared/services/dark-mode.service';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatBadgeModule,
   ],
 })
 export class NavbarComponent implements OnInit {
   appName = 'AppLogo';
   isDarkMode = false;
+  notificationsCount: number = 5;
 
   constructor(private darkModeService: DarkModeService) {}
 

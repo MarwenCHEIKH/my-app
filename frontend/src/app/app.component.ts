@@ -1,7 +1,8 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { DarkModeService } from './shared/services/dark-mode.service';
+import { DarkModeService } from './shared/services/dark-mode/dark-mode.service';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { ChatbotComponent } from './features/components/chatbot/chatbot.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css',
-  imports: [CommonModule, RouterOutlet, NavbarComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, ChatbotComponent],
 })
 export class AppComponent {
   title = 'frontend';

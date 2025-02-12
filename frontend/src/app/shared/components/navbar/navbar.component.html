@@ -29,6 +29,17 @@
             <span>Contact</span>
           </a>
         </li>
+        <li>
+          <a mat-button routerLink="/notification" class="notification-button">
+            <mat-icon
+              [matBadge]="notificationsCount"
+              matBadgeColor="warn"
+              matBadgePosition="above after"
+              aria-hidden="false"
+              >notifications</mat-icon
+            >
+          </a>
+        </li>
       </ul>
     </nav>
   </div>

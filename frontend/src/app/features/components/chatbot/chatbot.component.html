@@ -1,0 +1,12 @@
+<div class="chat-container">
+  <input [(ngModel)]="userMessage" placeholder="Type your message..." />
+  <button (click)="sendMessage()" [disabled]="isLoading">Send</button>
+
+  <div *ngIf="response" class="response">
+    {{ response }}
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+</div>
